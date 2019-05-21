@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -22,4 +21,4 @@ const userSchema = new Schema({
     }
 });
 
-mongoose.model('users', UserSchema);
+mongoose.model('users', userSchema);

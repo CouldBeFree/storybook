@@ -34,9 +34,7 @@ module.exports = function (passport) {
                         // Create user
                         new User(newUser)
                             .save()
-                            .then(user => {
-                                done(null, user)
-                            })
+                            .then(user => done(null, user))
                     }
                 })
         })
@@ -47,8 +45,6 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser((id, done) => {
-        User.findById(id).then(user => {
-            done(null, user)
-        })
+        User.findById(id).then(user => done(null, user))
     })
 };
